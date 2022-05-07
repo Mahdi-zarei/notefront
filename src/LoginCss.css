@@ -1,0 +1,40 @@
+.mainClass {
+    height: 98vh;
+    width: 98vw;
+}
+
+.loginClass {
+    display: inline-block;
+    background-color: #112816;
+    border: #002e1f 2px ridge;
+    border-radius: 8px;
+    width: 30%;
+    height: fit-content;
+    top: 35%;
+    position: relative;
+}
+
+.regClass {
+    display: inline-block;
+    background-color: #301826;
+    border: #1a002e 2px ridge;
+    border-radius: 8px;
+    width: 30%;
+    height: fit-content;
+    top: 32%;
+    position: relative;
+}
+
+.buttonCont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonClass {
+    background-color: black;
+    color: bisque;
+    border: #302f30 3px solid;
+    border-radius: 5px;
+    margin-left: 7%;
+    margin-right: 7%;
+}
