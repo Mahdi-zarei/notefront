@@ -3,11 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Page from "./LoginPage";
+
+export function load_page(page) {
+    root.render(
+  <React.StrictMode>
+      {page}
+  </React.StrictMode>
+);
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+  </React.StrictMode>
+);
+
+root.render(
+  <React.StrictMode>
+      <Page />
   </React.StrictMode>
 );
 

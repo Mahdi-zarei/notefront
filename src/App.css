@@ -1,38 +1,264 @@
+body {
+  background-color: black;
+}
+
 .App {
+  text-align: center;
+  color: burlywood;
+}
+
+.IOContainer {
+  background-color: black;
+  display: inline-block;
+  width: 35%;
+  height: 80vh;
+  float: left;
+}
+
+.InpContainer {
+  background-color: black;
+}
+
+.labelClass {
+  z-index: 9;
+  font-size: small;
+  display: block;
+  width: fit-content;
+  background-color: black;
+  position: relative;
+  left: 7%;
+  color: black;
+  top: 0;
+}
+
+@keyframes labelVisible {
+  from {color: black; top: 22px}
+  to {color: bisque;}
+}
+
+.labelShow {
+  animation: labelVisible 250ms;
+  color: bisque;
+}
+
+@keyframes labelDown {
+  from {color: bisque;}
+  to {top: 22px;color: black;}
+}
+
+.labelHide {
+  animation: labelDown 250ms;
+}
+
+.InpBox {
+  z-index: 10;
+  background-color: #00042e;
+  border: #1a002e 2px solid;
+  border-radius: 5px;
+  color: bisque;
+  margin: 2px;
+  min-width: 85%;
+  position: relative;
+}
+
+.TextAreaClassWrapper {
+  min-height: 80%;
+}
+
+.TextAreaClass {
+  z-index: 10;
+  display: inline-block;
+  background-color: #00042e;
+  border: #1a002e 2px solid;
+  border-radius: 3px;
+  overflow: auto;
+  resize: none;
+  color: bisque;
+  margin: 2px;
+  min-width: 85%;
+  max-height: 100%;
+  min-height: 84vh;
+  position: relative;
+}
+
+.ButtonContainer {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  position: center;
+  margin: auto;
+}
+
+.ButtonClass {
+  background-color: #002e1f;
+  color: bisque;
+  border: #001c08 2px solid;
+  border-radius: 4px;
+}
+
+
+
+.listClass {
+  height: 98vh;
+  width: 65%;
+  float: right;
+  background-color: #0e0017;
+  border-radius: 20px;
+}
+
+.NoteCont {
+  width: 90%;
+  height: fit-content;
+  border: #514317 3px ridge;
+  border-radius: 5px;
+  margin: 5px auto;
+}
+
+.titleClass {
+  font-family: "Harlow Solid Italic", serif;
+  background-color: #0e0017;
+  height: fit-content;
+  border-radius: 20px;
+  width: available;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.subjectClass {
+  background-color: #252500;
+  border-radius: 3px 3px 0 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contentClass {
+  background-color: #1a002e;
+  border-radius: 0 0 5px 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.innerContent {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 95%;
+  text-align: left;
+  display: inline-block;
+  height: fit-content;
 }
 
-.App-link {
-  color: #61dafb;
+.noteHover {
+  border: #230025 3px ridge;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subjHover {
+  background-color: #230025;
+}
+
+.viewClassDefault {
+  display: none;
+  position: absolute;
+  z-index: 200;
+  background-color: #070003;
+  border: #00042e 2px solid;
+  border-radius: 10px;
+  top: 15%;
+  left: 10%;
+  height: 70%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@keyframes jumpIn {
+  from {top:-200%}
+  to {top: 15%}
+}
+
+@keyframes jumpOut {
+  from {top: 15%}
+  to {top: -200%}
+}
+
+.viewClassVisible {
+  display: block;
+  animation: jumpIn 400ms;
+}
+
+.viewClassHide {
+  display: block;
+  animation: jumpOut 400ms;
+}
+
+@keyframes blurry {
+  from {filter: blur(0)}
+  to {filter: blur(5px)}
+}
+
+@keyframes clear {
+  from {filter: blur(5px)}
+  to {filter: blur(0)}
+}
+
+.blurIt {
+  animation: blurry 400ms;
+  filter: blur(5px);
+}
+
+.clearIt {
+  animation: clear 400ms;
+  filter: blur(0);
+}
+
+.viewSectionClass {
+  display: block;
+  background-color: #0e001e;
+  border: #1a002e 2px solid;
+  border-radius: 6px;
+  max-width: 95%;
+  margin: 4px auto;
+}
+
+.contentViewClass {
+  min-height: 70%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.buttonContClass {
+  position: absolute;
+  bottom: 0;
+  margin: 4px auto;
+  width: 100%;
+}
+
+.infoClassDefault {
+  z-index: 100;
+  display: none;
+  background-color: #00231f;
+  border: #000000 3px ridge;
+  border-radius: 10px;
+  width: fit-content;
+  position: absolute;
+  top: 10%;
+  height: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  line-height: 50px;
+}
+
+@keyframes infoShow {
+  from {opacity: 0}
+  to {opacity: 100%}
+}
+
+@keyframes infoHide {
+  from {opacity: 100%}
+  to {opacity: 0}
+}
+
+.infoClassShow {
+  display: block;
+  animation: infoShow 400ms;
+}
+
+.infoClassHide {
+  display: block;
+  animation: infoHide 800ms;
 }
